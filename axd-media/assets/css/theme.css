@@ -276,7 +276,7 @@ header.wp-block-template-part {
 	color: var(--axd-ink) !important;
 }
 .axd-nav .is-menu-open .wp-block-navigation__responsive-container-content {
-	padding-top: 56px !important;
+	padding-top: 36px !important;
 	align-items: stretch !important;
 }
 .axd-nav .is-menu-open .wp-block-navigation__container {
@@ -288,7 +288,7 @@ header.wp-block-template-part {
 	align-items: stretch !important;
 	width: 100%;
 	border-bottom: 1px solid var(--axd-line);
-	padding-block: 6px;
+	padding-block: 4px;
 }
 .axd-nav .is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item {
 	border-bottom: 0;
@@ -298,7 +298,7 @@ header.wp-block-template-part {
 	display: block !important;
 	font: 700 18px/1.3 var(--axd-jakarta);
 	color: var(--axd-ink) !important;
-	padding: 12px 4px !important;
+	padding: 10px 4px !important;
 	text-align: left;
 }
 .axd-nav .is-menu-open .has-child > .wp-block-navigation-item__content {
@@ -324,11 +324,31 @@ header.wp-block-template-part {
 .axd-nav .is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__content {
 	font-size: 16px;
 	font-weight: 600;
-	padding: 9px 4px !important;
+	padding: 7px 4px !important;
 }
 .axd-nav .is-menu-open .wp-block-navigation__submenu-container .wp-block-navigation-item__label { font-size: inherit; font-weight: inherit; }
 .axd-nav .is-menu-open [class*="axd-ico-"] > .wp-block-navigation-item__content::before,
 .axd-nav .is-menu-open .wp-block-navigation-item__description { display: none !important; }
+/* "Open Support Case" link: only shown, as a button, in the mobile menu. */
+.axd-nav .axd-nav-support { display: none !important; }
+.axd-nav .is-menu-open .axd-nav-support {
+	display: flex !important;
+	border-bottom: 0 !important;
+	padding-top: 20px !important;
+}
+.axd-nav .is-menu-open .axd-nav-support > .wp-block-navigation-item__content {
+	display: block !important;
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 17px;
+	padding: 14px 24px !important;
+	border-radius: 999px;
+	background: var(--wp--preset--color--blue, #0A5BEF);
+	color: #fff !important;
+	box-shadow: 0 14px 28px -12px rgba(10, 91, 239, .6);
+}
+.axd-nav .is-menu-open .axd-nav-support > .wp-block-navigation-item__content:focus-visible { outline: 3px solid #8AB6FF; outline-offset: 3px; }
 .axd-nav .wp-block-navigation__responsive-container-open {
 	width: 44px;
 	height: 44px;
