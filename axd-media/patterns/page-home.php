@@ -21,9 +21,8 @@ echo axd_s_hero( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscape
 			array( 'Explore Solutions', '#solutions', 'has-arrow' ),
 			array( 'View Our Work', '/our-work/', 'is-style-outline' ),
 		),
-		'img'     => 'home-hero-laptop.webp',
-		'alt'     => 'Laptop showing an AXD financial dashboard',
-		'home'    => true,
+		'img'     => 'hero-home.webp',
+		'alt'     => 'AI hub connected to cloud, analytics dashboard, support, security, settings and database icons',
 	)
 );
 
