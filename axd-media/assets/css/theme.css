@@ -953,3 +953,6 @@ main.wp-block-group { margin-top: 0 !important; }
 
 /* Screen-reader helper */
 .axd-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* Top-level dropdown labels without a link (Solutions, Our Work) */
+.axd-nav .has-child > a.wp-block-navigation-item__content:not([href]) { cursor: default; }
