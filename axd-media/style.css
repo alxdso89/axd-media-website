@@ -1,0 +1,17 @@
+/*
+Theme Name: AXD Media
+Theme URI: https://axdmedia.com
+Author: AXD Media
+Author URI: https://axdmedia.com
+Description: Lightweight custom block theme for AXD Media. Built for the WordPress block editor with reusable, editable section patterns, a Projects portfolio, and no page-builder dependencies.
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 8.1
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: axd-media
+Tags: block-patterns, full-site-editing, custom-colors, editor-style, wide-blocks
+*/
+
+/* Styles live in assets/css/theme.css and theme.json. */

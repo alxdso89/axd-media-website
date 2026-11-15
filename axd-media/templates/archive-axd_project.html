@@ -1,0 +1,45 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"default"}} -->
+<main class="wp-block-group"><!-- wp:group {"tagName":"section","className":"axd-section","layout":{"type":"constrained"}} -->
+<section class="wp-block-group axd-section"><!-- wp:group {"className":"axd-section-head","layout":{"type":"default"}} -->
+<div class="wp-block-group axd-section-head"><!-- wp:paragraph {"align":"center","className":"axd-eyebrow"} -->
+<p class="has-text-align-center axd-eyebrow">Projects</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:query-title {"type":"archive","textAlign":"center","level":1,"showPrefix":false} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:shortcode -->
+[axd_project_filters]
+<!-- /wp:shortcode -->
+
+<!-- wp:query {"queryId":2,"query":{"perPage":24,"pages":0,"offset":0,"postType":"axd_project","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"className":"axd-projects"} -->
+<div class="wp-block-query axd-projects"><!-- wp:post-template -->
+<!-- wp:post-featured-image {"sizeSlug":"axd-card"} /-->
+
+<!-- wp:group {"className":"axd-project__body","layout":{"type":"default"}} -->
+<div class="wp-block-group axd-project__body"><!-- wp:post-terms {"term":"axd_project_type"} /-->
+
+<!-- wp:post-title {"level":3,"isLink":true} /-->
+
+<!-- wp:post-terms {"term":"axd_industry"} /-->
+
+<!-- wp:post-excerpt {"excerptLength":30} /-->
+
+<!-- wp:paragraph {"className":"axd-more"} -->
+<p class="axd-more">View project →</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+<!-- /wp:post-template -->
+
+<!-- wp:query-no-results -->
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">New projects are coming soon.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></section>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

@@ -1,0 +1,34 @@
+/* AXD Support Desk admin screens */
+.axd-sd-muted { color: #646970; }
+.axd-sd-badge, .axd-sd-prio { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; line-height: 1.6; background: #F0F0F1; color: #1D2327; }
+.axd-sd-badge.is-new { background: #E8F0FF; color: #0A5BEF; }
+.axd-sd-badge.is-in_progress { background: #F2E8FD; color: #6A2EE8; }
+.axd-sd-badge.is-waiting { background: #FFF4E0; color: #8A5300; }
+.axd-sd-badge.is-resolved { background: #E7F7EF; color: #0E7A45; }
+.axd-sd-badge.is-closed { background: #F0F0F1; color: #50575E; }
+.axd-sd-prio.is-high { background: #FFF4E0; color: #8A5300; }
+.axd-sd-prio.is-urgent { background: #FDECEF; color: #B4233F; }
+.axd-sd-prio.is-low { color: #646970; }
+
+.axd-sd-dl { margin: 0; }
+.axd-sd-dl dt { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: #646970; margin-top: 10px; }
+.axd-sd-dl dd { margin: 2px 0 0; font-size: 14px; word-break: break-word; }
+.axd-sd-dl.is-wide { display: grid; grid-template-columns: 140px 1fr; gap: 6px 16px; }
+.axd-sd-dl.is-wide dt { margin: 0; padding-top: 2px; }
+.axd-sd-dl.is-wide dd { margin: 0; }
+.axd-sd-casenum { font-size: 16px; color: #0A5BEF; }
+
+.axd-sd-thread { display: flex; flex-direction: column; gap: 12px; }
+.axd-sd-msg { border: 1px solid #DCDCDE; border-radius: 10px; padding: 12px 16px; background: #fff; }
+.axd-sd-msg.is-client { background: #F6F7F7; }
+.axd-sd-msg.is-reply { border-left: 4px solid #0A5BEF; }
+.axd-sd-msg.is-note { background: #FFFBEA; border-color: #F0D78C; }
+.axd-sd-msg.is-status { background: transparent; border-style: dashed; padding: 8px 14px; color: #50575E; }
+.axd-sd-msg__head { font-size: 13px; margin-bottom: 6px; }
+.axd-sd-msg__head span { color: #646970; }
+.axd-sd-msg__body p { margin: 0 0 8px; }
+.axd-sd-msg__body p:last-child { margin-bottom: 0; }
+
+.axd-sd-types { display: flex; gap: 20px; flex-wrap: wrap; }
+.axd-sd-row { display: flex; gap: 24px; flex-wrap: wrap; align-items: flex-end; }
+.axd-sd-row p { margin: 12px 0 0; }
