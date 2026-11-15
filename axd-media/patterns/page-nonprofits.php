@@ -84,20 +84,3 @@ echo axd_s_feature(
 		'alt'     => 'Laptop showing an AXD dashboard',
 	)
 );
-
-// Blog posts (existing posts on axdmedia.com).
-$axd_posts = '';
-foreach ( array(
-	array( 'heart', 'purple', 'Feb 17, 2026', 'How Technology Can Elevate the Way Nonprofits Operate', '/how-technology-can-elevate-the-way-nonprofits-operate/' ),
-	array( 'shield-check', 'blue', 'Mar 1, 2026', 'Why a Strong IT Presence Is No Longer Optional', '/why-a-strong-it-presence-is-no-longer-optional/' ),
-) as $axd_pp ) {
-	$axd_post   = axd_b_img( axd_icon( $axd_pp[0], $axd_pp[1] ), '', 'axd-post__thumb' );
-	$axd_post  .= axd_b_p( esc_html( $axd_pp[2] ), 'axd-post__date' );
-	$axd_post  .= axd_b_h( 3, '<a href="' . esc_url( $axd_pp[4] ) . '">' . esc_html( $axd_pp[3] ) . '</a>' );
-	$axd_post  .= axd_b_p( 'Read article →', 'axd-more' );
-	$axd_posts .= axd_b_group( $axd_post, 'axd-tile is-link axd-post' );
-}
-echo axd_s_section(
-	axd_s_head( 'Insights', 'From <span class="axd-grad">Our Blog</span>' ) . axd_b_group( $axd_posts, 'axd-grid-2' ),
-	'is-alt'
-);
