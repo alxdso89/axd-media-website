@@ -22,9 +22,9 @@ echo axd_s_hero(
 			array( 'Schedule a Consultation', '/contact/', 'has-arrow' ),
 			array( 'How We Help', '#help', 'is-style-outline' ),
 		),
-		'img'       => 'legal-intake.webp',
-		'alt'       => 'Desktop monitor showing a client intake website with a step-by-step intake form',
-		'img_class' => 'is-shot',
+		'img'       => 'legal-hero-2.webp',
+		'alt'       => 'Laptop showing a legal case manager, with scales of justice, gavel and law books',
+		'img_class' => 'is-wide',
 	)
 );
 
@@ -83,9 +83,8 @@ echo axd_s_feature(
 			'We develop custom applications, data repositories, and dashboards that bring information together from different systems, simplify reporting, and help organizations track services, grants, and operational performance.',
 		),
 		'pills'     => array( 'Case management integrations', 'Grant dashboards', 'Custom applications', 'Workflow automation' ),
-		'buttons'   => array( array( 'Explore Custom Applications', '/custom-applications-ai/', 'is-style-white has-arrow' ) ),
-		'img'       => 'legal-dashboard.webp',
-		'alt'       => 'Grant and program reporting dashboard with funding totals, trends and service metrics',
-		'img_class' => 'is-framed',
+		'img'       => 'legal-team.webp',
+		'alt'       => 'Legal team reviewing case and reporting data on a transparent display in front of a courthouse',
+		'img_class' => 'is-photo-wide is-fade-soft',
 	)
 );
