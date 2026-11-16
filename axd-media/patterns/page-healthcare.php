@@ -22,9 +22,8 @@ echo axd_s_hero(
 			array( 'Schedule a Consultation', '/contact/', 'has-arrow' ),
 			array( 'Explore Solutions', '/#solutions', 'is-style-outline' ),
 		),
-		'img'       => 'healthcare-hero.webp',
-		'alt'       => 'Healthcare analytics dashboard with patient, appointment and quality charts',
-		'img_class' => 'is-shot',
+		'img'       => 'healthcare-hero-2.webp',
+		'alt'       => 'Healthcare analytics dashboard on a tablet with a clipboard, stethoscope and AXD Media branding',
 	)
 );
 
