@@ -24,6 +24,7 @@ echo axd_s_hero(
 		),
 		'img'       => 'healthcare-hero-2.webp',
 		'alt'       => 'Healthcare analytics dashboard on a tablet with a clipboard, stethoscope and AXD Media branding',
+		'img_class' => 'is-wide',
 	)
 );
 

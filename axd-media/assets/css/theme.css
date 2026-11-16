@@ -420,6 +420,13 @@ main.wp-block-group { margin-top: 0 !important; }
 	margin-right: -2%;
 	filter: drop-shadow(0 26px 30px rgba(20, 24, 90, .35));
 }
+/* Wide cut-out scenes (Healthcare): fill the column, slightly past its edge */
+.axd-hero__img.is-wide img {
+	width: 114%;
+	max-width: 700px;
+	max-height: none;
+	margin-right: -6%;
+}
 /* Nonprofits hero photo already includes its own frame + tilt */
 .axd-hero__img.is-framed img { max-width: 470px; filter: drop-shadow(0 28px 34px rgba(8, 26, 59, .28)); margin-inline: auto; }
 /* Screenshot in a tilted white frame (Healthcare / Legal) */
@@ -443,6 +450,7 @@ main.wp-block-group { margin-top: 0 !important; }
 	.axd-hero .wp-block-column { flex-basis: 100% !important; }
 	.axd-hero__img img { margin-inline: auto; max-height: none; }
 	.axd-hero--home .axd-hero__img img { width: 108%; margin: 0 -4%; }
+	.axd-hero__img.is-wide img { width: 100%; margin-right: auto; }
 }
 @media (max-width: 600px) {
 	.axd-hero-shell { padding: 10px 10px 0; }

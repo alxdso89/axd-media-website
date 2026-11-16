@@ -84,8 +84,8 @@ echo axd_s_feature( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEsc
 		'title'   => 'Real Solutions.<br><span class="axd-accent">Measurable Results.</span>',
 		'paras'   => array( 'Explore how we’ve helped organizations improve operations, enhance service delivery, and make data-driven decisions.' ),
 		'buttons' => array( array( 'View Our Work', '/our-work/', 'is-style-white has-arrow' ) ),
-		'img'     => 'featured-devices.webp',
-		'alt'     => 'AXD applications on a laptop, tablet and monitors: a financial dashboard, a scheduling calendar, a custom request portal and an analytics map',
+		'img'     => 'featured-bulb.webp',
+		'alt'     => 'Glowing light bulb with a network of connected points, beside a laptop and a plant',
 		'home'    => true,
 	)
 );
