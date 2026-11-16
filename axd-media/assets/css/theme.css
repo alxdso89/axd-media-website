@@ -635,6 +635,9 @@ main.wp-block-group { margin-top: 0 !important; }
 }
 .axd-feature__img.is-shadow img { filter: drop-shadow(0 34px 34px rgba(0, 6, 30, .6)) drop-shadow(0 10px 12px rgba(0, 6, 30, .4)); max-height: none; }
 .axd-feature__img.is-framed img { border: 6px solid rgba(255, 255, 255, .9); border-radius: 20px; box-shadow: 0 34px 50px -20px rgba(0, 6, 30, .7); max-height: none; }
+/* Soft-edged photo (Healthcare care team): larger, bleeding toward the right edge */
+.axd-feature__img.is-photo-wide img { width: 130%; max-width: none; max-height: none; margin: 0 -20% 0 -10%; }
+.axd-feature__img.is-photo-wide img { -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 12%); mask-image: linear-gradient(180deg, transparent 0, #000 12%); }
 .axd-feature__img.is-fade img { -webkit-mask-image: linear-gradient(180deg, #000 56%, transparent 86%); mask-image: linear-gradient(180deg, #000 56%, transparent 86%); }
 .axd-feature__img.is-fade-late img { -webkit-mask-image: linear-gradient(180deg, #000 64%, transparent 94%); mask-image: linear-gradient(180deg, #000 64%, transparent 94%); }
 .axd-feature__img.is-fade-soft img { -webkit-mask-image: linear-gradient(180deg, #000 66%, transparent 98%); mask-image: linear-gradient(180deg, #000 66%, transparent 98%); }
@@ -660,6 +663,7 @@ main.wp-block-group { margin-top: 0 !important; }
 	.axd-feature { padding: 48px 40px; }
 	.axd-feature .wp-block-columns { flex-wrap: wrap !important; }
 	.axd-feature .wp-block-column { flex-basis: 100% !important; }
+	.axd-feature__img.is-photo-wide img { width: 100%; max-width: 640px; margin: 0 auto; }
 }
 @media (max-width: 600px) {
 	.axd-feature { padding: 36px 22px; border-radius: 22px; }

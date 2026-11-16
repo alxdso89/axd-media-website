@@ -83,8 +83,8 @@ echo axd_s_feature(
 			'We help turn that information into dashboards, reporting tools, and integrated applications that give leadership and staff a clearer understanding of performance.',
 		),
 		'pills'   => array( 'EHR integrations', 'Clinical dashboards', 'Quality reporting', 'Operational analytics' ),
-		'buttons' => array( array( 'Explore Data Analytics', '/data-analytics-dashboards/', 'is-style-white has-arrow' ) ),
-		'img'     => 'healthcare-laptop.webp',
-		'alt'     => 'Laptop showing a healthcare operations dashboard with appointments, no-shows and patient visits',
+		'img'       => 'healthcare-care-team.webp',
+		'alt'       => 'Nurse and doctor reviewing patient data on a tablet beside a health analytics display',
+		'img_class' => 'is-photo-wide',
 	)
 );
