@@ -22,8 +22,9 @@ echo axd_s_hero(
 			array( 'Browse Projects', '#projects', 'has-arrow' ),
 			array( 'Schedule a Consultation', '/contact/', 'is-style-outline' ),
 		),
-		'img'     => 'featured-devices.webp',
-		'alt'     => 'AXD applications shown on a laptop, tablet and monitors',
+		'img'       => 'our-work-hero.webp',
+		'alt'       => 'Glowing light bulb with gears beside glass blocks showing a target, an org chart, a growth chart and a rocket',
+		'img_class' => 'is-wide',
 	)
 );
 
