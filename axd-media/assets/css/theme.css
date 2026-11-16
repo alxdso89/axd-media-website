@@ -422,10 +422,17 @@ main.wp-block-group { margin-top: 0 !important; }
 }
 /* Wide cut-out scenes (Healthcare): fill the column, slightly past its edge */
 .axd-hero__img.is-wide img {
-	width: 114%;
-	max-width: 700px;
+	/* Extend into the hero's right padding: more on wide screens, never past the edge */
+	--axd-bleed: clamp(24px, calc(50vw - 610px), 110px);
+	width: calc(100% + var(--axd-bleed));
+	max-width: none;
 	max-height: none;
-	margin-right: -6%;
+	margin-right: calc(-1 * var(--axd-bleed));
+}
+@media (min-width: 901px) {
+	/* Give wide hero scenes a bit more room than the default 50/50 split */
+	.axd-hero .wp-block-columns:has(.is-wide) > .wp-block-column:first-child { flex: 0 0 47% !important; }
+	.axd-hero .wp-block-columns:has(.is-wide) > .wp-block-column:last-child { flex: 1 1 0 !important; }
 }
 /* Nonprofits hero photo already includes its own frame + tilt */
 .axd-hero__img.is-framed img { max-width: 470px; filter: drop-shadow(0 28px 34px rgba(8, 26, 59, .28)); margin-inline: auto; }
