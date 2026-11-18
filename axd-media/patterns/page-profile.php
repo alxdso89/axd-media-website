@@ -15,7 +15,9 @@ defined( 'ABSPATH' ) || exit;
 
 // Card header: photo, name, tagline.
 $axd_head  = axd_b_img( axd_img( 'profile-alex-dueso.webp' ), 'Alex Dueso', 'axd-profile__photo' );
-$axd_head .= axd_b_img( axd_img( 'logo-color.webp' ), 'AXD Media', 'axd-profile__logo' );
+$axd_head .= '<!-- wp:image {"width":"90px","sizeSlug":"full","linkDestination":"none","className":"axd-profile__logo"} -->' . "\n"
+	. '<figure class="wp-block-image size-full is-resized axd-profile__logo"><img src="' . axd_img( 'logo-axd-mark.webp' ) . '" alt="AXD" style="width:90px"/></figure>' . "\n"
+	. "<!-- /wp:image -->\n\n";
 $axd_head .= axd_b_h( 1, 'Alex Dueso', 'axd-profile__name' );
 $axd_head .= axd_b_p( 'Technology Solutions for Business', 'axd-profile__tag' );
 $axd_card  = axd_b_group( $axd_head, 'axd-profile__head' );
@@ -34,7 +36,7 @@ $axd_body .= axd_b_buttons(
 	array(
 		array( 'Save My Contact', '/team/alex-dueso/?vcard=1', 'axd-profile__save' ),
 		array( 'Schedule a Consultation', '/contact/', 'axd-profile__book' ),
-		array( 'Share This Card', '/team/alex-dueso/', 'is-style-outline axd-share' ),
+		array( 'Save This Contact to Your Phone', 'https://axdmedia.com/wp-content/AlexDueso-AXDMedia-CEO.vcf', 'is-style-outline axd-profile__save-alt' ),
 	),
 	'axd-profile__actions'
 );
