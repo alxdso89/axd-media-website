@@ -5,61 +5,76 @@
  * Categories: axd-pages
  * Post Types: page
  * Block Types: core/post-content
- * Viewport Width: 1400
- * Description: Digital business card page for a team member (use with the Profile Card template).
+ * Viewport Width: 1200
+ * Description: Digital business card for a team member, centered over a full-page background (use with the Profile Card template).
  *
  * @package AXD_Media
  */
 
 defined( 'ABSPATH' ) || exit;
 
-// Hero: name, contact actions, photo.
-$axd_left  = axd_b_p( 'AXD Media', 'axd-eyebrow is-dark has-rule' );
-$axd_left .= axd_b_h( 1, 'Alex <span class="axd-grad">Dueso.</span>' );
-$axd_left .= axd_b_p( 'Technology Solutions for Business', 'axd-profile__tag' );
-$axd_left .= axd_b_p( 'Custom solutions, data insights, modern websites, and reliable IT support to help your organization work smarter, serve better, and grow with confidence.', 'axd-lead' );
-$axd_left .= axd_b_buttons(
-	array(
-		array( 'Save Contact', '/team/alex-dueso/?vcard=1', 'axd-profile__save' ),
-		array( 'Schedule a Consultation', '/contact/', 'is-style-outline' ),
-	)
-);
-$axd_left .= axd_b_buttons(
+// Card header: photo, name, tagline.
+$axd_head  = axd_b_img( axd_img( 'profile-alex-dueso.webp' ), 'Alex Dueso', 'axd-profile__photo' );
+$axd_head .= axd_b_p( 'AXD Media', 'axd-profile__org' );
+$axd_head .= axd_b_h( 1, 'Alex Dueso', 'axd-profile__name' );
+$axd_head .= axd_b_p( 'Technology Solutions for Business', 'axd-profile__tag' );
+$axd_card  = axd_b_group( $axd_head, 'axd-profile__head' );
+
+// Actions.
+$axd_body  = axd_b_buttons(
 	array(
 		array( 'Call', 'tel:+13059293239', 'is-call' ),
+		array( 'Text', 'sms:+13059293239', 'is-text' ),
 		array( 'Email', 'mailto:info@axdmedia.com', 'is-email' ),
 		array( 'Website', 'https://axdmedia.com/', 'is-web' ),
 	),
 	'axd-profile__quick'
 );
-$axd_right = axd_b_img( axd_img( 'profile-alex-dueso.webp' ), 'Alex Dueso', 'axd-hero__img is-portrait' );
-echo axd_b_group( axd_b_group( axd_b_cols( array( $axd_left, $axd_right ) ), 'axd-hero axd-hero--profile', 'div', 'constrained' ), 'axd-hero-shell' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+$axd_body .= axd_b_buttons(
+	array(
+		array( 'Save My Contact', '/team/alex-dueso/?vcard=1', 'axd-profile__save' ),
+		array( 'Schedule a Consultation', '/contact/', 'axd-profile__book' ),
+		array( 'Share This Card', '/team/alex-dueso/', 'is-style-outline axd-share' ),
+	),
+	'axd-profile__actions'
+);
 
-// Contact cards.
+// About.
+$axd_body .= axd_b_p( 'About', 'axd-profile__label' );
+$axd_body .= axd_b_p( 'Technology Solutions for Business', 'axd-profile__lead' );
+$axd_body .= axd_b_p( 'AXD Media helps businesses, nonprofits, and healthcare organizations solve operational challenges with practical technology: data, applications, websites, and IT support.' );
+$axd_body .= axd_b_p( 'With more than 25 years of technology industry experience behind our approach, AXD Media brings together technical expertise, industry knowledge, and a practical understanding of business operations.' );
+$axd_body .= axd_b_p( 'We work closely with clients to understand their challenges, identify opportunities, and develop technology solutions that deliver meaningful results.' );
+
+// Help + industries.
+$axd_body .= axd_b_p( 'What I Can Help With', 'axd-profile__label' );
+$axd_body .= axd_b_list(
+	array(
+		'<a href="/data-analytics-dashboards/">Data Analytics &amp; Dashboards</a>',
+		'<a href="/custom-applications-ai/">Custom Applications &amp; AI</a>',
+		'<a href="/website-development/">Website Development</a>',
+		'<a href="/it-support-consulting/">IT Support &amp; Consulting</a>',
+	),
+	'axd-profile__chips'
+);
+$axd_body .= axd_b_p( 'Industries', 'axd-profile__label' );
+$axd_body .= axd_b_list(
+	array(
+		'<a href="/nonprofits/">Nonprofits</a>',
+		'<a href="/healthcare/">Healthcare</a>',
+		'<a href="/legal/">Legal</a>',
+	),
+	'axd-profile__chips'
+);
+
+// Contact details.
+$axd_body .= axd_b_p( 'Contact', 'axd-profile__label' );
 $axd_rows  = axd_b_p( '<a href="tel:+13059293239"><span class="axd-pc__label">Phone</span>(305) 929-3239</a>', 'axd-pc is-phone' );
 $axd_rows .= axd_b_p( '<a href="mailto:info@axdmedia.com"><span class="axd-pc__label">Email</span>info@axdmedia.com</a>', 'axd-pc is-email' );
 $axd_rows .= axd_b_p( '<a href="https://axdmedia.com/"><span class="axd-pc__label">Website</span>axdmedia.com</a>', 'axd-pc is-web' );
 $axd_rows .= axd_b_p( '<a href="/support/"><span class="axd-pc__label">Client Support</span>Open a support case</a>', 'axd-pc is-support' );
-echo axd_s_section( axd_b_group( $axd_rows, 'axd-profile__contacts' ), 'is-tight-pad' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+$axd_body .= axd_b_group( $axd_rows, 'axd-profile__contacts' );
 
-// How I can help: same solution cards as the home page.
-$axd_cards = array(
-	array( 'card-da.webp', 'Data Analytics &amp; Dashboards', 'Turn your data into clear, actionable insights.', '/data-analytics-dashboards/' ),
-	array( 'card-apps.webp', 'Custom Applications &amp; AI', 'Build secure, effective tools that automate work and improve results.', '/custom-applications-ai/' ),
-	array( 'card-web.webp', 'Website Development', 'Modern, responsive websites that engage and inform.', '/website-development/' ),
-	array( 'card-it.webp', 'IT Support &amp; Consulting', 'Reliable IT support and strategic guidance to keep you running smoothly.', '/it-support-consulting/' ),
-);
-$axd_grid = '';
-foreach ( $axd_cards as $axd_c ) {
-	$axd_body  = axd_b_h( 3, '<a href="' . esc_url( $axd_c[3] ) . '">' . $axd_c[1] . '</a>' );
-	$axd_body .= axd_b_p( esc_html( $axd_c[2] ) );
-	$axd_body .= axd_b_p( '', 'axd-go' );
-	$axd_card  = axd_b_img( axd_img( $axd_c[0] ), '', 'axd-card__img' );
-	$axd_card .= axd_b_group( $axd_body, 'axd-card__body' );
-	$axd_grid .= axd_b_group( $axd_card, 'axd-card' );
-}
-echo axd_s_section( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	axd_s_head( 'How I Can Help', 'Technology That Works <span class="axd-grad">for You</span>' )
-	. axd_b_group( $axd_grid, 'axd-grid-4' ),
-	'is-alt'
-);
+$axd_card .= axd_b_group( $axd_body, 'axd-profile__body' );
+
+echo axd_b_group( axd_b_group( $axd_card, 'axd-profile__card' ), 'axd-profile' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
