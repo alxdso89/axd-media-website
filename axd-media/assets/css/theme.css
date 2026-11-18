@@ -1091,7 +1091,8 @@ main.wp-block-group { margin-top: 0 !important; }
 	border: 4px solid #fff;
 	box-shadow: 0 0 0 4px rgba(185, 140, 255, .45), 0 16px 30px -10px rgba(0, 0, 0, .6);
 }
-.axd-profile__org { margin-top: 16px !important; font: 800 12px/1 var(--axd-jakarta); letter-spacing: .2em; text-transform: uppercase; color: #9CC2FF; }
+.axd-profile__logo { margin-top: 18px !important; }
+.axd-profile__logo img { display: block; width: 150px; height: auto; margin: 0 auto; }
 .axd-profile__name { margin-top: 8px !important; color: #fff; font-size: clamp(30px, 7vw, 36px); line-height: 1.1; }
 .axd-profile__tag { margin-top: 8px !important; font: 700 15px/1.4 var(--axd-jakarta); color: var(--axd-lavender, #B98CFF); }
 
