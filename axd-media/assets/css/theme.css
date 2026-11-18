@@ -1053,129 +1053,90 @@ main.wp-block-group { margin-top: 0 !important; }
 /* Top-level dropdown labels without a link (Solutions, Our Work) */
 .axd-nav .has-child > a.wp-block-navigation-item__content:not([href]) { cursor: default; }
 
-/* Profile card (digital business card) ---------------------------------- */
+/* Profile page (digital business card) -------------------------------- */
 .axd-profile-main { margin: 0; }
-.axd-profile {
-	min-height: 100vh;
-	min-height: 100svh;
-	padding: 120px 16px 32px;
-	background: #081A3B url(../images/ftl-bg.webp) 50% 0 / cover no-repeat fixed;
-	box-sizing: border-box;
-}
-@media (max-width: 900px) {
-	.axd-profile {
-		background: linear-gradient(180deg, rgba(18, 15, 51, 0) 300px, #120F33 360px), url(../images/ftl-bg.webp) 50% 0 / auto 360px no-repeat, #120F33;
-		padding-top: 300px;
-	}
-}
-.axd-profile__card {
-	position: relative;
-	max-width: 460px;
-	margin: 0 auto;
-	padding: 92px 28px 30px;
-	border-radius: 28px;
-	background: rgba(255, 255, 255, .97);
-	box-shadow: 0 40px 80px -30px rgba(8, 26, 59, .65), 0 0 0 1px rgba(255, 255, 255, .6);
-	text-align: center;
-}
-.axd-profile__card > * { margin-block: 0; }
-.axd-profile__photo { position: absolute; left: 50%; top: -76px; transform: translateX(-50%); margin: 0 !important; }
-.axd-profile__photo img {
-	width: 152px;
-	height: 152px;
-	border-radius: 50%;
-	object-fit: cover;
-	border: 5px solid #fff;
-	box-shadow: 0 18px 36px -12px rgba(8, 26, 59, .55), 0 0 0 3px rgba(133, 37, 220, .35);
-}
-.axd-profile__name { font-size: clamp(30px, 8vw, 38px); line-height: 1.1; margin: 0 !important; }
-.axd-profile__org {
-	margin-top: 6px !important;
-	font: 700 17px/1.3 var(--axd-jakarta);
-	background: linear-gradient(90deg, #0A5BEF, #8525DC);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-}
-.axd-profile__tag { margin-top: 10px !important; font: 700 11px/1.4 var(--axd-jakarta); letter-spacing: .16em; text-transform: uppercase; color: var(--axd-muted); }
-.axd-profile__primary { margin-top: 24px !important; }
-.axd-profile__primary .wp-block-button,
-.axd-profile__primary .wp-block-button__link { width: 100%; justify-content: center; }
+.axd-hero--profile h1 { font-size: clamp(44px, 6vw, 72px); }
+.axd-profile__tag { margin-top: 10px !important; font: 800 13px/1.4 var(--axd-jakarta); letter-spacing: .16em; text-transform: uppercase; color: var(--axd-violet); }
+.axd-hero--profile .axd-lead { max-width: 520px; }
 .axd-profile__save .wp-block-button__link { gap: 10px; }
 .axd-profile__save .wp-block-button__link::before {
 	content: "";
 	width: 20px;
 	height: 20px;
+	flex: none;
 	background: url(../icons/user-plus-white.svg) center / contain no-repeat;
 }
-.axd-profile__quick { margin-top: 12px !important; display: grid !important; grid-template-columns: repeat(3, 1fr); gap: 10px !important; }
-.axd-profile__quick .wp-block-button { width: auto; margin: 0; }
+.axd-hero .axd-profile__quick { margin-top: 14px !important; gap: 10px; }
 .axd-profile__quick .wp-block-button__link {
-	width: 100%;
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
+	display: inline-flex;
 	align-items: center;
-	gap: 6px;
-	padding: 14px 6px;
-	border-radius: 16px;
-	background: var(--axd-off, #F4F7FE);
-	color: var(--axd-ink);
-	font-size: 13px;
-	box-shadow: none;
+	gap: 8px;
+	padding: 10px 16px;
+	border-radius: 999px;
+	background: rgba(255, 255, 255, .75);
 	border: 1px solid var(--axd-line);
+	color: var(--axd-ink);
+	font-size: 14px;
+	box-shadow: none;
 }
 .axd-profile__quick .wp-block-button__link:hover { background: #fff; color: var(--axd-blue); border-color: var(--axd-blue); }
-.axd-profile__quick .wp-block-button__link::before { content: ""; width: 22px; height: 22px; background: center / contain no-repeat; }
+.axd-profile__quick .wp-block-button__link::before { content: ""; width: 18px; height: 18px; flex: none; background: center / contain no-repeat; }
 .axd-profile__quick .is-call .wp-block-button__link::before { background-image: url(../icons/phone-blue.svg); }
 .axd-profile__quick .is-email .wp-block-button__link::before { background-image: url(../icons/mail-blue.svg); }
 .axd-profile__quick .is-web .wp-block-button__link::before { background-image: url(../icons/globe-blue.svg); }
+.axd-hero__img.is-portrait img {
+	width: 100%;
+	max-width: 440px;
+	max-height: none;
+	aspect-ratio: 550 / 580;
+	object-fit: cover;
+	margin-inline: auto;
+	border-radius: 28px;
+	border: 6px solid rgba(255, 255, 255, .85);
+	box-shadow: 0 34px 60px -26px rgba(8, 26, 59, .6);
+	filter: none;
+}
 
-.axd-profile__contacts { margin-top: 24px !important; text-align: left; border-top: 1px solid var(--axd-line); }
+.axd-section.is-tight-pad { padding-block: 56px; }
+.axd-profile__contacts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
 .axd-profile__contacts > * { margin: 0 !important; }
 .axd-pc a {
 	display: grid;
-	grid-template-columns: 40px 1fr;
+	grid-template-columns: 48px minmax(0, 1fr);
 	column-gap: 14px;
 	align-items: center;
-	padding: 14px 4px;
-	border-bottom: 1px solid var(--axd-line);
+	height: 100%;
+	box-sizing: border-box;
+	padding: 20px;
+	border-radius: 20px;
+	background: #fff;
+	border: 1px solid var(--axd-line);
+	box-shadow: var(--axd-shadow);
 	color: var(--axd-ink);
-	font: 700 15px/1.3 var(--axd-jakarta);
+	font: 700 16px/1.3 var(--axd-jakarta);
 	text-decoration: none;
+	overflow-wrap: anywhere;
+	transition: transform .2s ease, border-color .2s ease;
 }
 .axd-pc a::before {
 	content: "";
 	grid-row: span 2;
-	width: 40px;
-	height: 40px;
-	border-radius: 12px;
-	background: #EEF3FF center / 20px no-repeat;
+	width: 48px;
+	height: 48px;
+	border-radius: 14px;
+	background: #EEF3FF center / 22px no-repeat;
 }
 .axd-pc.is-phone a::before { background-image: url(../icons/phone-blue.svg); }
 .axd-pc.is-email a::before { background-image: url(../icons/mail-blue.svg); }
 .axd-pc.is-web a::before { background-image: url(../icons/globe-blue.svg); }
 .axd-pc.is-support a::before { background-color: #F3ECFF; background-image: url(../icons/headset-purple.svg); }
-.axd-pc a:hover { color: var(--axd-blue); }
-.axd-pc__label { display: block; font: 600 11px/1.4 var(--axd-jakarta); letter-spacing: .12em; text-transform: uppercase; color: var(--axd-muted); }
-
-.axd-profile__eyebrow { margin-top: 26px !important; font: 800 12px/1 var(--axd-jakarta); letter-spacing: .16em; text-transform: uppercase; color: var(--axd-violet, #6A2EE8); }
-.axd-profile__services { list-style: none; padding: 0; margin: 14px 0 0 !important; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
-.axd-profile__services li { margin: 0; }
-.axd-profile__services a {
-	display: inline-block;
-	padding: 9px 14px;
-	border-radius: 999px;
-	background: #F4F7FE;
-	border: 1px solid var(--axd-line);
-	color: var(--axd-ink);
-	font: 600 13px/1.2 var(--axd-jakarta);
-	text-decoration: none;
+.axd-pc a:hover { transform: translateY(-3px); border-color: var(--axd-blue); color: var(--axd-blue); }
+.axd-pc__label { display: block; font: 700 11px/1.4 var(--axd-jakarta); letter-spacing: .12em; text-transform: uppercase; color: var(--axd-muted); }
+@media (max-width: 1100px) { .axd-profile__contacts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+	.axd-profile__contacts { grid-template-columns: 1fr; gap: 12px; }
+	.axd-section.is-tight-pad { padding-block: 36px; }
+	.axd-hero__img.is-portrait img { max-width: 340px; }
+	.axd-hero .axd-profile__quick { display: grid; grid-template-columns: repeat(3, 1fr); }
+	.axd-profile__quick .wp-block-button__link { width: 100%; justify-content: center; padding: 10px 6px; }
 }
-.axd-profile__services a:hover { border-color: var(--axd-blue); color: var(--axd-blue); }
-.axd-profile__cta { margin-top: 24px !important; flex-direction: column; gap: 10px !important; }
-.axd-profile__cta .wp-block-button,
-.axd-profile__cta .wp-block-button__link { width: 100%; justify-content: center; box-sizing: border-box; }
-.axd-profile__foot { margin: 22px 0 0 !important; text-align: center; font: 600 13px/1.4 var(--axd-jakarta); }
-.axd-profile__foot a { color: #fff; text-decoration: none; opacity: .85; }
-.axd-profile__foot a:hover { opacity: 1; }
