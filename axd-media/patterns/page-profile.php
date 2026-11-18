@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 // Card header: photo, name, tagline.
 $axd_head  = axd_b_img( axd_img( 'profile-alex-dueso.webp' ), 'Alex Dueso', 'axd-profile__photo' );
-$axd_head .= axd_b_img( axd_img( 'logo-white.webp' ), 'AXD Media', 'axd-profile__logo' );
+$axd_head .= axd_b_img( axd_img( 'logo-color.webp' ), 'AXD Media', 'axd-profile__logo' );
 $axd_head .= axd_b_h( 1, 'Alex Dueso', 'axd-profile__name' );
 $axd_head .= axd_b_p( 'Technology Solutions for Business', 'axd-profile__tag' );
 $axd_card  = axd_b_group( $axd_head, 'axd-profile__head' );
