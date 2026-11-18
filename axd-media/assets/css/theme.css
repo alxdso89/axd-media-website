@@ -1059,7 +1059,7 @@ main.wp-block-group { margin-top: 0 !important; }
 	min-height: calc(100vh - 85px);
 	padding: 40px 16px 64px;
 	box-sizing: border-box;
-	background: #120F33 url(../images/ftl-bg.webp) 50% 100% / cover no-repeat fixed;
+	background: #1B1050 url(../images/ftl-bg.webp) 50% 50% / cover no-repeat fixed;
 }
 .axd-profile__card {
 	max-width: 480px;
@@ -1179,7 +1179,7 @@ main.wp-block-group { margin-top: 0 !important; }
 
 @media (max-width: 900px) {
 	/* Fixed backgrounds are unreliable on phones: use a normal one, anchored on the skyline */
-	.axd-profile { background-attachment: scroll; background-size: auto 100%; background-position: 46% 100%; min-height: calc(100vh - 73px); }
+	.axd-profile { background-attachment: scroll; background-size: auto 100vh; background-position: 42% 0; background-repeat: no-repeat; min-height: calc(100vh - 73px); }
 }
 @media (max-width: 520px) {
 	.axd-profile { padding: 20px 12px 40px; }
