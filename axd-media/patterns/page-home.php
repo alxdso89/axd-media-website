@@ -11,6 +11,8 @@
  * @package AXD_Media
  */
 
+defined( 'ABSPATH' ) || exit;
+
 // Hero.
 echo axd_s_hero( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- block markup built from escaped parts.
 	array(
