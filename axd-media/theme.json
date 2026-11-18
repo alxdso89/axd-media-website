@@ -126,6 +126,7 @@
 		{ "name": "footer", "title": "Footer", "area": "footer" }
 	],
 	"customTemplates": [
-		{ "name": "page-with-title", "title": "Page with Title (simple text page)", "postTypes": [ "page" ] }
+		{ "name": "page-with-title", "title": "Page with Title (simple text page)", "postTypes": [ "page" ] },
+		{ "name": "page-profile", "title": "Profile Card (digital business card)", "postTypes": [ "page" ] }
 	]
 }

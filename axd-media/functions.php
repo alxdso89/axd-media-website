@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'AXD_THEME_VERSION', '1.0.11' );
+define( 'AXD_THEME_VERSION', '1.0.12' );
 
 require_once get_theme_file_path( 'inc/helpers.php' );
 require_once get_theme_file_path( 'inc/pattern-helpers.php' );
@@ -15,6 +15,7 @@ require_once get_theme_file_path( 'inc/projects.php' );
 require_once get_theme_file_path( 'inc/shortcodes.php' );
 require_once get_theme_file_path( 'inc/redirects.php' );
 require_once get_theme_file_path( 'inc/security.php' );
+require_once get_theme_file_path( 'inc/profiles.php' );
 
 if ( defined( 'WP_CLI' ) && WP_CLI ) {
 	require_once get_theme_file_path( 'inc/cli.php' );
