@@ -36,7 +36,7 @@ $axd_body .= axd_b_buttons(
 	array(
 		array( 'Save My Contact', '/team/alex-dueso/?vcard=1', 'axd-profile__save' ),
 		array( 'Schedule a Consultation', '/contact/', 'axd-profile__book' ),
-		array( 'Save This Contact to Your Phone', 'https://axdmedia.com/wp-content/AlexDueso-AXDMedia-CEO.vcf', 'is-style-outline axd-profile__save-alt' ),
+		array( 'Share This Card', '/team/alex-dueso/', 'is-style-outline axd-share' ),
 	),
 	'axd-profile__actions'
 );
