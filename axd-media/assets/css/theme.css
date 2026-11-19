@@ -1073,28 +1073,39 @@ main.wp-block-group { margin-top: 0 !important; }
 }
 .axd-profile__card > * { margin: 0 !important; }
 
-/* Navy header */
+/* Header: tech background, glowing portrait frame, name block */
 .axd-profile__head {
-	padding: 34px 24px 28px;
+	padding: 36px 24px 30px;
 	text-align: center;
 	color: #fff;
-	background: radial-gradient(120% 90% at 85% 0%, rgba(133, 37, 220, .55), transparent 60%), linear-gradient(160deg, #081A3B 0%, #0B2A5E 55%, #0A5BEF 120%);
+	background: linear-gradient(180deg, rgba(8, 26, 59, .15), rgba(8, 26, 59, .45)), #0B1E5C url(../images/profile-header-bg.webp) 50% 40% / cover no-repeat;
 }
 .axd-profile__head > * { margin: 0 !important; }
-.axd-profile__photo img {
-	display: block;
-	width: 128px;
-	height: 128px;
-	margin: 0 auto;
-	border-radius: 26px;
-	object-fit: cover;
-	border: 4px solid #fff;
-	box-shadow: 0 0 0 4px rgba(185, 140, 255, .55), 0 0 0 7px rgba(10, 91, 239, .45), 0 18px 32px -10px rgba(0, 0, 0, .6);
+.axd-profile__photo {
+	width: 184px;
+	max-width: 56%;
+	margin: 0 auto !important;
+	padding: 3px;
+	border-radius: 34px;
+	background: linear-gradient(135deg, #3FD0FF, #0A5BEF 45%, #8525DC);
+	box-shadow: 0 0 16px rgba(63, 208, 255, .45), 0 0 30px rgba(133, 37, 220, .35), 0 20px 36px -14px rgba(0, 0, 0, .65);
 }
-.axd-profile__logo { margin-top: 18px !important; }
-.axd-profile__logo img { display: block; width: 124px; height: auto; margin: 0 auto; filter: drop-shadow(0 0 1px rgba(255, 255, 255, .95)) drop-shadow(0 0 2px rgba(255, 255, 255, .7)) drop-shadow(0 0 9px rgba(255, 255, 255, .5)); }
-.axd-profile__name { margin-top: 8px !important; color: #fff; font-size: clamp(30px, 7vw, 36px); line-height: 1.1; }
-.axd-profile__tag { margin-top: 8px !important; font: 700 15px/1.4 var(--axd-jakarta); color: var(--axd-lavender, #B98CFF); }
+.axd-profile__photo img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 31px; }
+.axd-profile__logo { margin-top: 20px !important; }
+.axd-profile__logo img { display: block; width: 96px; height: auto; margin: 0 auto; filter: drop-shadow(0 0 1px rgba(255, 255, 255, .95)) drop-shadow(0 0 2px rgba(255, 255, 255, .7)) drop-shadow(0 0 9px rgba(255, 255, 255, .5)); }
+.axd-profile__name { margin-top: 10px !important; color: #fff; font-size: clamp(38px, 10vw, 46px); line-height: 1.05; letter-spacing: -.02em; text-shadow: 0 2px 14px rgba(0, 0, 0, .35); }
+.axd-profile__role { margin-top: 10px !important; font: 600 17px/1.35 var(--axd-jakarta); color: #fff; }
+.axd-profile__company { margin-top: 4px !important; font: 500 15px/1.35 var(--axd-jakarta); color: #C9D5F0; }
+.axd-profile__tag { margin-top: 0 !important; font-style: italic; font-weight: 500; font-size: clamp(14px, 3.7vw, 16px); white-space: nowrap; line-height: 1.4; color: #E6EBFF; }
+.axd-profile__tag::before {
+	content: "";
+	display: block;
+	width: 150px;
+	height: 2px;
+	margin: 16px auto 14px;
+	border-radius: 2px;
+	background: linear-gradient(90deg, transparent, #3FD0FF 30%, #8525DC 70%, transparent);
+}
 
 /* Body */
 .axd-profile__body { padding: 22px 22px 26px; }
@@ -1135,10 +1146,12 @@ main.wp-block-group { margin-top: 0 !important; }
 .axd-profile__actions .wp-block-button__link { gap: 10px; padding-block: 14px; }
 .axd-profile__save .wp-block-button__link::before { content: ""; width: 20px; height: 20px; flex: none; background: url(../icons/user-plus-white.svg) center / contain no-repeat; }
 .axd-profile__book .wp-block-button__link { background: var(--axd-navy, #081A3B); }
+.axd-profile__book .wp-block-button__link::before { content: ""; width: 20px; height: 20px; flex: none; background: url(../icons/calendar-white.svg) center / contain no-repeat; }
 .axd-profile__book .wp-block-button__link:hover { background: #0B2A5E; }
 .axd-share .wp-block-button__link::before { content: ""; width: 18px; height: 18px; flex: none; background: url(../icons/share-ink.svg) center / contain no-repeat; }
 
-.axd-profile__label { margin-top: 26px !important; padding-top: 22px; border-top: 1px solid var(--axd-line); font: 800 11px/1 var(--axd-jakarta); letter-spacing: .16em; text-transform: uppercase; color: var(--axd-muted); }
+.axd-profile__label { display: flex; align-items: center; gap: 12px; margin-top: 28px !important; padding-top: 24px; border-top: 1px solid var(--axd-line); font: 800 12px/1 var(--axd-jakarta); letter-spacing: .16em; text-transform: uppercase; color: var(--axd-ink); }
+.axd-profile__label::after { content: ""; width: 56px; height: 3px; border-radius: 3px; background: linear-gradient(90deg, #8525DC, #0A5BEF); }
 .axd-profile__lead { margin-top: 14px !important; margin-bottom: 2px !important; font: 800 16px/1.4 var(--axd-jakarta); background: linear-gradient(90deg, #0A5BEF, #8525DC); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .axd-profile__body > p:not(.axd-profile__label):not(.axd-profile__lead) { margin-top: 12px !important; font-size: 15px; line-height: 1.65; color: var(--axd-muted); }
 .axd-profile__chips { list-style: none; padding: 0; margin: 12px 0 0 !important; display: flex; flex-wrap: wrap; gap: 8px; }
@@ -1187,3 +1200,21 @@ main.wp-block-group { margin-top: 0 !important; }
 	.axd-profile__body { padding: 18px 16px 22px; }
 	.axd-profile__quick .wp-block-button__link { font-size: 12px; }
 }
+
+/* Profile tags with small icons */
+.axd-profile__chips.has-icons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.axd-profile__chips.has-icons + .axd-profile__label + .axd-profile__chips.has-icons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.axd-profile__chips.has-icons li { display: flex; }
+.axd-profile__chips.has-icons a { display: flex; align-items: center; gap: 8px; width: 100%; min-height: 44px; box-sizing: border-box; padding: 8px 12px; border-radius: 14px; font-size: 13px; line-height: 1.25; }
+.axd-profile__chips.has-icons a::before { content: ""; width: 16px; height: 16px; flex: none; background-position: center; background-size: contain; background-repeat: no-repeat; }
+.axd-profile__chips .is-data::before { background-image: url(../icons/chart-line-blue.svg); }
+.axd-profile__chips .is-apps::before { background-image: url(../icons/layers-blue.svg); }
+.axd-profile__chips .is-web::before { background-image: url(../icons/code-blue.svg); }
+.axd-profile__chips .is-it::before { background-image: url(../icons/monitor-blue.svg); }
+.axd-profile__chips .is-health::before { background-image: url(../icons/heart-blue.svg); }
+.axd-profile__chips .is-nonprofit::before { background-image: url(../icons/team-blue.svg); }
+.axd-profile__chips .is-legal::before { background-image: url(../icons/scale-blue.svg); }
+.axd-profile__actions .wp-block-button__link { min-height: 52px; }
+.axd-profile__quick .wp-block-button__link { min-height: 76px; }
+@media (max-width: 360px) { .axd-profile__tag { white-space: normal; } .axd-profile__chips.has-icons + .axd-profile__label + .axd-profile__chips.has-icons { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.axd-profile__chips.has-icons + .axd-profile__label + .axd-profile__chips.has-icons a { justify-content: center; padding-inline: 8px; gap: 6px; }

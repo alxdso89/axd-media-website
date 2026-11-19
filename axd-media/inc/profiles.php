@@ -22,8 +22,8 @@ function axd_profiles() {
 		'alex-dueso' => array(
 			'first'   => 'Alex',
 			'last'    => 'Dueso',
-			'org'     => 'AXD Media',
-			'title'   => '',
+			'org'     => 'AXD Media Technologies',
+			'title'   => 'Founder & Technology Consultant',
 			'phone'   => '+13059293239',
 			'email'   => 'info@axdmedia.com',
 			'url'     => 'https://axdmedia.com',

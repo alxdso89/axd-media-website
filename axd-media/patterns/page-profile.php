@@ -19,7 +19,9 @@ $axd_head .= '<!-- wp:image {"width":"90px","sizeSlug":"full","linkDestination":
 	. '<figure class="wp-block-image size-full is-resized axd-profile__logo"><img src="' . axd_img( 'logo-axd-mark.webp' ) . '" alt="AXD" style="width:90px"/></figure>' . "\n"
 	. "<!-- /wp:image -->\n\n";
 $axd_head .= axd_b_h( 1, 'Alex Dueso', 'axd-profile__name' );
-$axd_head .= axd_b_p( 'Technology Solutions for Business', 'axd-profile__tag' );
+$axd_head .= axd_b_p( 'Founder &amp; Technology Consultant', 'axd-profile__role' );
+$axd_head .= axd_b_p( 'AXD Media Technologies', 'axd-profile__company' );
+$axd_head .= axd_b_p( 'Simplifying Technology. Empowering Growth.', 'axd-profile__tag' );
 $axd_card  = axd_b_group( $axd_head, 'axd-profile__head' );
 
 // Actions.
@@ -42,31 +44,30 @@ $axd_body .= axd_b_buttons(
 );
 
 // About.
-$axd_body .= axd_b_p( 'About', 'axd-profile__label' );
-$axd_body .= axd_b_p( 'Technology Solutions for Business', 'axd-profile__lead' );
-$axd_body .= axd_b_p( 'AXD Media helps businesses, nonprofits, and healthcare organizations solve operational challenges with practical technology: data, applications, websites, and IT support.' );
-$axd_body .= axd_b_p( 'With more than 25 years of technology industry experience behind our approach, AXD Media brings together technical expertise, industry knowledge, and a practical understanding of business operations.' );
-$axd_body .= axd_b_p( 'We work closely with clients to understand their challenges, identify opportunities, and develop technology solutions that deliver meaningful results.' );
+$axd_body .= axd_b_p( 'About Me', 'axd-profile__label' );
+$axd_body .= axd_b_p( 'I believe technology should make work easier, not more complicated.', 'axd-profile__lead' );
+$axd_body .= axd_b_p( 'With over 25 years of experience in IT and healthcare technology, I help organizations solve everyday challenges through practical solutions, better systems, and smarter use of data.' );
+$axd_body .= axd_b_p( 'My approach starts with listening, understanding how people work, and finding solutions that make a meaningful difference. Whether it’s improving IT operations, building applications, or turning data into useful insights, my goal is to help organizations work more effectively and grow with confidence.' );
 
 // Help + industries.
 $axd_body .= axd_b_p( 'What I Can Help With', 'axd-profile__label' );
 $axd_body .= axd_b_list(
 	array(
-		'<a href="/data-analytics-dashboards/">Data Analytics &amp; Dashboards</a>',
-		'<a href="/custom-applications-ai/">Custom Applications &amp; AI</a>',
-		'<a href="/website-development/">Website Development</a>',
-		'<a href="/it-support-consulting/">IT Support &amp; Consulting</a>',
+		'<a class="is-data" href="/data-analytics-dashboards/">Data Analytics &amp; Dashboards</a>',
+		'<a class="is-apps" href="/custom-applications-ai/">Custom Applications &amp; AI</a>',
+		'<a class="is-web" href="/website-development/">Website Development</a>',
+		'<a class="is-it" href="/it-support-consulting/">IT Support &amp; Consulting</a>',
 	),
-	'axd-profile__chips'
+	'axd-profile__chips has-icons'
 );
 $axd_body .= axd_b_p( 'Industries', 'axd-profile__label' );
 $axd_body .= axd_b_list(
 	array(
-		'<a href="/nonprofits/">Nonprofits</a>',
-		'<a href="/healthcare/">Healthcare</a>',
-		'<a href="/legal/">Legal</a>',
+		'<a class="is-health" href="/healthcare/">Healthcare</a>',
+		'<a class="is-nonprofit" href="/nonprofits/">Nonprofits</a>',
+		'<a class="is-legal" href="/legal/">Legal</a>',
 	),
-	'axd-profile__chips'
+	'axd-profile__chips has-icons'
 );
 
 // Contact details.
