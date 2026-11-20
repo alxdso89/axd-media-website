@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'AXD_THEME_VERSION', '1.0.16' );
+define( 'AXD_THEME_VERSION', '1.0.17' );
 
 require_once get_theme_file_path( 'inc/helpers.php' );
 require_once get_theme_file_path( 'inc/pattern-helpers.php' );
